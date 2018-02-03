@@ -58,7 +58,8 @@ were input into the function:
 
 // Write your code here
 function multiply(a,b){
-    
+    const multiplyAnswer = a * b;
+    return [multiplyAnswer, 'The product of ' + a + ' and ' + b + ' is ' + multiplyAnswer + '.'];
 
 }
 
