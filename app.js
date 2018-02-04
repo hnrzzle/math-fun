@@ -130,12 +130,16 @@ IMPORTANT DETAIL! IMPORTANT DETAIL! IMPORTANT DETAIL!
 
 // Write your code here
 
-function sumArray(testArray){ //eslint-disable-line
-
+function sumArray(testArray){
+    const arrayInput = sum(testArray[0], testArray[1]);
+    const arrayInput2 = sum(arrayInput[0], testArray[2]);
+    
+    return [arrayInput2[0], testArray + ' was passed in as an array of numbers, and ' + arrayInput2[0] + ' is their sum.'];
+    
 }
 
 // Here is the test for sumArray(); uncomment it to run it
-// testSumArray();
+testSumArray();
 
 
 
