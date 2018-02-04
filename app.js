@@ -141,13 +141,6 @@ function sumArray(testArray){
 // Here is the test for sumArray(); uncomment it to run it
 testSumArray();
 
-
-
-
-
-
-
-
 /////////////////////////////////////
 /* Problem 5
 Write a function called multiplyArray() that takes an array 
@@ -169,9 +162,13 @@ IMPORTANT DETAIL! IMPORTANT DETAIL! IMPORTANT DETAIL!
 */
 
 // Write your code here
-function multiplyArray(testArray){ //eslint-disable-line
+function multiplyArray(testArray){
+    const arrayInput = multiply(testArray[0], testArray[1]);
+    const arrayInput2 = multiply(arrayInput[0], testArray[2]);
+
+    return [arrayInput2[0], 'The numbers ' + testArray + ' have a product of ' + arrayInput2[0] + '.'];
 
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray();
+testMultiplyArray();
