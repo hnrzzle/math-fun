@@ -30,20 +30,13 @@ the values that were input into the function:
 */
 
 // Write your code here
-function sum(num1, num2){
-    const answer = num1 + num2;
-    return [answer, 'The sum of ' + num1 + ' and '  + num2 + ' is ' + answer + '.'];
+function sum(a, b){
+    const answer = a + b;
+    return [answer, 'The sum of ' + a + ' and '  + b + ' is ' + answer + '.'];
 }
 
 // Here is the test for sum(); uncomment it to run it
 testSum();
-
-
-
-
-
-
-
 
 /////////////////////////////////////
 /* Problem 2
@@ -65,12 +58,6 @@ function multiply(a,b){
 
 // Here is the test for multiply(); uncomment it to run it
 testMultiply();
-
-
-
-
-
-
 
 
 /////////////////////////////////////
@@ -97,12 +84,21 @@ IMPORTANT DETAIL! IMPORTANT DETAIL! IMPORTANT DETAIL!
 */
 
 // Write your code here
-function sumAndMultiply(a,b,c){ //eslint-disable-line
+function sumAndMultiply(a,b,c){
+    const sumAnswer1 = sum(a,b);
+    const sumAnswer2 = sum(sumAnswer1[0], c);
+    
+    const multiplyAnswer1 = multiply(a,b);
+    const multiplyAnswer2 = multiply(multiplyAnswer1[0], c);
+    console.log(multiplyAnswer1);
+    console.log(multiplyAnswer2);
 
+
+    return [sumAnswer2[0], multiplyAnswer2[0], a + ' and ' + b + ' and ' + c + ' sum to ' + sumAnswer2[0] + '.', 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + multiplyAnswer2[0] + '.'];
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply();
+testSumAndMultiply();
 
 
 
